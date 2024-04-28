@@ -51,7 +51,7 @@ INPUT_STYLES = {
     "width": "250px",
     "height": "50px",
     "font_size": "18px",
-    "::placeholder": {
-        "color": "white",
-    },
+    # "::placeholder": {
+    #    "color": "white",
+    # },
 }
