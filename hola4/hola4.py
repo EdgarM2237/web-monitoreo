@@ -6,7 +6,7 @@ from hola4.paginas.login import index
 
 
 class State(rx.State):
-    pass
+    "pass"
 
 # Pagina principal de inicio de sesion
 
