@@ -37,6 +37,7 @@ def index() -> rx.Component:
             margin="auto",
             width="90%",
             height="65vh",
+            minHeight="546px",
             center_content=True,
             border_radius="10px",
             boxShadow="1px 1px 50px #140d3a, -1px 1px 20px 0px #523077",
