@@ -31,7 +31,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update static build
-          commit_user_name: Brais Moure [GitHub Actions]
-          commit_user_email: mouredev@gmail.com
-          commit_author: Brais Moure <mouredev@gmail.com>
+          commit_user_name: Edgar Mendez [GitHub Actions]
+          commit_user_email: edgarmendezcruz75@gmail.com
+          commit_author: Edgar Mendez <edgarmendezcruz75@gmail.com>
       
