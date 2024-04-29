@@ -1,6 +1,6 @@
 import reflex as rx
 import hola4.styles.styles as styles
-
+from hola4.api.api import ping
 # paginas
 from hola4.paginas.login import index
 
@@ -19,5 +19,6 @@ app = rx.App(
     ],
     style=styles.BASE_STYLE
 )
+app.api.add_api_route("/hello", ping)
 
 app.add_page(index)
