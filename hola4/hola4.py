@@ -14,6 +14,7 @@ class State(rx.State):
 # creacion de la pagina
 app = rx.App(
     stylesheets=[
+        "/styles.css",
         "https://fonts.googleapis.com/css2?family=Concert+One&display=swap",
     ],
     style=styles.BASE_STYLE

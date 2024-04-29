@@ -54,5 +54,5 @@ INPUT_STYLES = {
     "::placeholder": {
         "color": "white",
     },
-    "background_color": "var(--color-transparent)"
+
 }
