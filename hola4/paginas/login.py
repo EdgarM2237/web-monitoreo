@@ -14,7 +14,7 @@ preview = ""
 
 
 @rx.page(
-    route="/login",
+    route="/",
     title=tittle,
     description=descrition,
     image="/splash.png",
