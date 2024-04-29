@@ -6,17 +6,36 @@ import hola4.styles.links as links
 import hola4.styles.styles as styles
 
 
-@rx.page(
+tittle = "RMI | Red de Monitoreo Inteligente"
+descrition = """RMI es una innovadora plataforma IoT 
+                    diseñada para ofrecer un control total y un monitoreo inteligente de tus 
+                    dispositivos y sistemas conectados."""
+preview = ""
 
+
+@rx.page(
+    route="/login",
+    title=tittle,
+    description=descrition,
+    image="/splash.png",
+    meta=[
+        {"name": "og:type", "content": "website"},
+        {"name": "og:tittle", "content": tittle},
+        {"name": "og:description", "content": descrition},
+        {"name": "og:image", "content": preview},
+        {"name": "twitter:card", "content": "sumary_large_image"},
+        {"name": "twitter:site", "content": "@RMI"}
+    ],
 )
 def index() -> rx.Component:
     # Fondo de la web
     return rx.container(
+        rx.script("document.documentElement.lang='utf-8'"),
         # Contenedor principal
         rx.container(
             # Items integrados en el contenedor
             rx.vstack(
-                textos_titulos("Inicio de Sesion", styles.FUENTE_PREDEFINIDA),
+                textos_titulos("Inicio de Sesión", styles.FUENTE_PREDEFINIDA),
                 formato_input("user", "Usuario", "email"),
                 formato_input("rectangle-ellipsis", "Contraseña", "password"),
                 pushbutton("circle-chevron-right", "Iniciar Sesión"),
@@ -31,8 +50,6 @@ def index() -> rx.Component:
 
                 align="center",
             ),
-
-
             maxWidth="375px",
             margin="auto",
             width="90%",
