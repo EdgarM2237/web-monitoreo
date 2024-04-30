@@ -3,6 +3,7 @@ import hola4.styles.styles as styles
 from hola4.api.api import ping
 # paginas
 from hola4.paginas.login import index
+from hola4.paginas.index import monitoreo
 
 
 class State(rx.State):
