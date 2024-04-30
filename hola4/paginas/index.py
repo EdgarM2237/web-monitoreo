@@ -1,8 +1,7 @@
 import reflex as rx
-from hola4.componets.navbar import textos_titulos
+from hola4.componets.navbar import textos_titulos, navbar
 from hola4.componets.formato_button import pushbutton, icon_pushbutton
 from hola4.componets.formato_input import formato_input
-import hola4.styles.links as links
 import hola4.styles.styles as styles
 
 
@@ -14,7 +13,7 @@ preview = ""
 
 
 @rx.page(
-    route="/index",
+    route="/monitoreo",
     title=tittle,
     description=descrition,
     image="/splash.png",
@@ -29,40 +28,48 @@ preview = ""
 )
 def monitoreo() -> rx.Component:
     # Fondo de la web
-    return rx.container(
-        rx.script("document.documentElement.lang='utf-8'"),
-        # Contenedor principal
-        rx.container(
-            # Items integrados en el contenedor
-            rx.vstack(
-                textos_titulos("Inicio de Sesión", styles.FUENTE_PREDEFINIDA),
-                formato_input("user", "Usuario", "email"),
-                formato_input("rectangle-ellipsis", "Contraseña", "password"),
-                pushbutton("circle-chevron-right", "Iniciar Sesión"),
+    return rx.vstack(
+        navbar(),
+        rx.grid(
+            rx.grid(
+                # grafica
+                rx.container(
+                    "Example",
+                    bg="orange",
+                    width="100%"
+                ),
+                # datos barras
                 rx.container(
                     rx.hstack(
-                        icon_pushbutton("github", links.GITHUB_LINK),
-                        icon_pushbutton("instagram", links.INSTAGRAM_LINK),
-                        icon_pushbutton("youtube", links.YOUTUBE_LINK),
-                        icon_pushbutton("facebook", links.FACEBOOK_LINK)
+                        "Example",
+                        bg="orange",
+                        width="100%"
                     )
                 ),
+                # datos torta
+                rx.container(
+                    rx.hstack(
+                        "Example",
+                        bg="orange",
+                        width="100%"
+                    )
+                ),
+                rows="3",
+                spacing="4",
+                width="100%"
 
-                align="center",
             ),
-            maxWidth="375px",
-            margin="auto",
-            width="90%",
-            height="65vh",
-            minHeight="546px",
-            center_content=True,
-            border_radius="10px",
-            boxShadow="1px 1px 50px #140d3a, -1px 1px 20px 0px #523077",
-        ),
-        justifyContent="center",
-        size="1",
-        maxWidth="100%",
-        height="100vh",
-        background_image="""radial-gradient(circle at 62.28% -19.64%, #794398 0, 
-                                #55327a 25%, #321f59 50%, #130d39 75%, #00001e 100%)""",
+            # datos derecha
+            rx.container(
+                rx.hstack(
+                    "Example",
+                    bg="orange",
+                    border_radius="3px",
+                    width="20%",
+                ),
+            ),
+            columns="2",
+            spacing="4",
+            width="100%",
+        )
     )

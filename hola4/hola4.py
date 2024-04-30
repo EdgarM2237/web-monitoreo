@@ -20,4 +20,4 @@ app = rx.App(
     ],
     style=styles.BASE_STYLE
 )
-app.api.add_api_route("/hello", ping)
+# app.api.add_api_route("/hello", ping)
